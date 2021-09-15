@@ -10,7 +10,7 @@ export const Dropdown = ({ inputId, inputClassname, mainText, content, icon }) =
         setisOpen(!isOpen)
     };
 
-    const useOutsideAlerter = (ref, isOpen) => {
+    const handleOutsideClick= (ref, isOpen) => {
         useEffect(() => {
             function handleClickOutside(event) {
 
@@ -25,7 +25,7 @@ export const Dropdown = ({ inputId, inputClassname, mainText, content, icon }) =
         }, [ref, isOpen]);
     };
 
-    useOutsideAlerter(wrapperRef, isOpen);
+    handleOutsideClick(wrapperRef, isOpen);
 
     const renderDropdownContent = () => (
         <div className={`dropdown-content-wrapper ${!isOpen ? 'hidden' : ''}`}>
