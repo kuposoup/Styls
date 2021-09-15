@@ -9,6 +9,7 @@ import {
 import './Inventory.styles.css';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+import { INVENTORY } from '../../constants/constants';
 
 export const Inventory = () => {
     /* -------------- State -------------- */
@@ -33,8 +34,8 @@ export const Inventory = () => {
     /* --------------  Render functions -------------- */
     const renderHeader = () => (
         <div className="inventory-header-wrapper">
-            <div className="inventory-header-text">
-                Inventory
+            <div className="inventory-header-text slideDown">
+                {INVENTORY}
             </div>
             <div className="inventory-btn-wrapper">
                 <Dropdown

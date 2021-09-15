@@ -3,6 +3,7 @@
     height: 75px;
     flex-direction: row;
     background-color: gray;
+    z-index: 5;
 }
 
 .head-lnk-wrapper {
@@ -15,6 +16,7 @@
     font-weight: 200;
     font-size: 25px;
     transition: 0.3s;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .head-lnk:hover {

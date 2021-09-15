@@ -1,17 +1,18 @@
 import React from 'react';
 import './ActionsCellRenderer.styles.css';
 
-export const ActionCellRenderer = ({ content, api }) => {
+export const ActionCellRenderer = (props) => {
     /* -------------- CRUD functions -------------- */
-    const handleClick = (option) => {
-        console.log(option)
+    const handleClick = () => {
+       const rowId = props.data;
+       console.log(rowId)
     }
     return (
         <div className="action-content-wrapper">
-            {content.map((option) => { 
+            {props.content.map((option) => { 
                 if (!option.id.includes('add')) {
                     return (
-                        <div key={option.id} className="action-content" onClick={() => handleClick(option)} >
+                        <div key={option.id} className="action-content" onClick={handleClick} >
                             {option.icon}
                         </div>
                     )

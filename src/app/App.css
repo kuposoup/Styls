@@ -12,6 +12,21 @@ body {
   overflow: auto;
 }
 
+@keyframes slidedown {
+  0% {
+    height: 0;
+    transform:scaleY(0%);
+  }
+  100% {
+    height: 100%;
+    transform: scaleY(100%);
+  }
+}
+
+.slideDown {  
+  animation: 0.5s ease-out 0s 1 slidedown;
+}
+
 :root {
   --primary-button: rgb(0, 102, 255);
   --negative: red;
@@ -19,7 +34,7 @@ body {
 }
 /* AG-Grid */
 .ag-root-wrapper-body.ag-layout-normal.ag-focus-managed {
-  height: 600px
+  height: 650px
 }
 
 .ag-theme-alpine {

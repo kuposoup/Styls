@@ -1,13 +1,30 @@
 .inventory-header-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 4rem 0 1rem 3rem;
+    margin: 0 0 1rem 0;
     justify-content: flex-start;
 }
 
 .inventory-header-text {
-    font-size: 30px;
+    margin-bottom: 3rem;
+
+    font-size: 40px;
     font-weight: 200;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 5px;
+    color: white;
+
+    background-color: gray;
+
+    border-bottom: 4px white double;
+    border-top: 1px white solid;
+
+    transition: 0.5s ease-out;
+}
+
+.hidden {
+    display: none;
+    height: 0;
 }
 
 .inventory-btn-wrapper {

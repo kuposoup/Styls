@@ -1,13 +1,14 @@
 import React from 'react';
 import './TextBox.styles.css';
 
-export const TextBox = ({ textBoxType, inputId, inputClassname, value }) => (
+export const TextBox = ({ inputId, inputClassname, value, handleOnChange }) => (
     <div className="txtbx-wrapper">
         <input 
             id={inputId} 
             className={`txtbx ${inputClassname}`} 
-            type={textBoxType} 
+            type="text"
             value={value}
+            onChange={handleOnChange}
         />
     </div>
 );

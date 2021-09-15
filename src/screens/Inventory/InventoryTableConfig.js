@@ -93,6 +93,8 @@ export const getInventoryGridConfig = (edit, del, gridApi) => {
       api: gridApi,
     },
     suppressMovable: true,
+    maxWidth: 100,
+    pinned: 'right',
     hide: false,
   }]
   

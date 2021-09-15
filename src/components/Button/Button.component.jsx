@@ -1,12 +1,13 @@
 import React from 'react';
 import './Button.styles.css';
 
-export const Button = ({ buttonText, onClick, inputClassname, inputId, icon }) => (
+export const Button = ({ buttonType, buttonText, handleOnClick, inputClassname, inputId, icon }) => (
     <div className="btn-wrapper">
         <button 
             id={inputId} 
             className={`btn ${inputClassname}`} 
-            onClick={onClick}
+            type={buttonType}
+            onClick={handleOnClick}
         >
             {buttonText} 
             {icon}
