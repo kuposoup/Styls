@@ -1,0 +1,38 @@
+.head-wrapper {
+    display: flex;
+    height: 75px;
+    flex-direction: row;
+    background-color: gray;
+}
+
+.head-lnk-wrapper {
+    margin: 20px;
+}
+
+.head-lnk {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.head-lnk:hover {
+    letter-spacing: 5px;
+    transition: 0.3s;
+}
+
+.head-logo {
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+    filter: invert(100%);
+    margin: 15px;
+    height: 40px;
+    width: 40px;
+    transition: 0.3s;
+}
+
+.head-logo:hover {
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}

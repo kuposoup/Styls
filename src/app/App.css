@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
+
+:root {
+  --primary-button: rgb(0, 102, 255);
+  --negative: red;
+  --positive: rgb(2, 172, 2);
+}
+/* AG-Grid */
+.ag-root-wrapper-body.ag-layout-normal.ag-focus-managed {
+  height: 600px
+}
+
+.ag-theme-alpine {
+  text-align: left;
+}

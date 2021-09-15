@@ -1,0 +1,47 @@
+.btn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 1.5rem;
+    border: none;
+    color: white;
+    font-weight: 700;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.2); 
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.active {
+    transform: scale(1.2); 
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.delete {
+    background-color: var(--negative);
+    transition: 0.3s;
+}
+
+.delete:hover {
+    transition: 0.3s;
+}
+
+.add {
+    background-color: var(--positive);
+    transition: 0.3s;
+}
+
+.add:hover {
+    transition: 0.3s;
+}
+
+.edit {
+    background-color: var(--primary-button);
+    transition: 0.3s;
+}
+
+.edit:hover {
+    transition: 0.3s;  
+}

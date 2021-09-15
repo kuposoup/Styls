@@ -1,0 +1,15 @@
+.action-content-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.action-content {
+    margin: 0 10px;
+    color: grey;
+}
+
+.action-content:hover {
+    cursor: pointer;
+}
+
+

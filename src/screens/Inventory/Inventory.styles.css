@@ -1,0 +1,29 @@
+.inventory-header-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0 1rem 3rem;
+    justify-content: flex-start;
+}
+
+.inventory-header-text {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.inventory-btn-wrapper {
+    margin: 3rem 2rem 0 0;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.inventory-dropdown {
+    background-color: grey;
+    transition: 0.3s;
+}
+
+.inventory-dropdown:hover {
+    transition: 0.3s;
+}
+

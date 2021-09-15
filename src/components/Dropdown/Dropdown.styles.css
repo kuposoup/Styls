@@ -1,0 +1,34 @@
+.dropdown-content-wrapper.hidden {
+    display: none;
+}
+
+.dropdown-content-wrapper {
+    position: absolute;
+    right: 10px;
+    width: 200px;
+    margin: 5px;
+    background-color: white;
+    box-shadow: 4px 4px 4px 4px lightgray;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.dropdown-content-item {
+    display: flex;
+    height: 3rem;
+    padding: 0 10px;
+    align-items: center;
+    border-bottom: 1px lightgrey solid;
+
+    color: grey;
+    font-weight: 700;
+}
+.dropdown-content-icon {
+    margin-right: 10px;
+    color: grey;
+}
+
+.dropdown-content-item:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
