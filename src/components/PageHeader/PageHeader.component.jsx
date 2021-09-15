@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import scissors from '../../assets/scissors.svg';
+import placeholderLogo from '../../assets/placeholderLogo.svg';
 import navigationOptions from '../../config/navigation/navigaion-config'
 import './PageHeader.styles.css';
 
@@ -8,7 +8,7 @@ export const PageHeader = () => {
     
     const renderLogo = () => (
         <div className="head-logo-wrapper">
-            <img className="head-logo" src={scissors} alt="logo" />
+            <img className="head-logo" src={placeholderLogo} alt="logo" />
         </div>
     )
     const renderOptions = () => (

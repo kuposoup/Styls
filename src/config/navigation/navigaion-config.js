@@ -24,6 +24,16 @@ export const navigationOptions = [
       text: 'Account',
       url: '/account'
     },
+    {
+      key: 'sign-in',
+      text: 'Sign In',
+      url: '/signin'
+    }, 
+    {
+      key: 'sign-up',
+      text: 'Sign Up',
+      url: '/signup'
+    }, 
 ];
 
 export default navigationOptions;

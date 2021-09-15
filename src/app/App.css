@@ -38,5 +38,6 @@ body {
 }
 
 .ag-theme-alpine {
+  font-family: 'Ubuntu', sans-serif;
   text-align: left;
 }
