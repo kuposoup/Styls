@@ -27,10 +27,22 @@ body {
   animation: 0.5s ease-out 0s 1 slidedown;
 }
 
+.modal {
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
 :root {
-  --primary-button: rgb(0, 102, 255);
+  --primary-button: rgb(70, 128, 255);
   --negative: red;
   --positive: rgb(2, 172, 2);
+  --alert: rgb(255, 145, 0);
 }
 /* AG-Grid */
 .ag-root-wrapper-body.ag-layout-normal.ag-focus-managed {

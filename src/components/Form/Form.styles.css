@@ -1,0 +1,14 @@
+.form-wrapper {
+    padding: 2rem;
+}
+
+.form-txt-box-wrapper {
+    margin: 1rem 0;
+}
+
+.form-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin: 2rem 1rem 0 0;  
+}

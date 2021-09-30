@@ -1,17 +1,32 @@
 .btn {
     display: flex;
     align-items: center;
-    width: fit-content;
-    height: 1.5rem;
+    justify-content: center;
+    min-width: 4rem;
+    height: 2rem;
+    margin: 0 1rem;
+
     border: none;
-    color: white;
+    border-radius: 4px;
     font-weight: 700;
+    transition: 0.3s;
+}
+
+.alert-btn {
+    background-color: var(--alert);
+    color: white;
+}
+
+.message-btn, .form-btn {
+    color: white;
+    background-color: var(--primary-button);
 }
 
 .btn:hover {
     cursor: pointer;
     transform: scale(1.2); 
     box-shadow: 5px 5px 5px lightgray;
+    transition: 0.3s;
 }
 
 .active {
@@ -44,4 +59,19 @@
 
 .edit:hover {
     transition: 0.3s;  
+}
+
+.btn-icon {
+    margin-right: 0.5rem;
+    padding-top: 3px;
+}
+
+.btn-text {
+    width: max-content;
+}
+
+.google-btn {
+    background-color: white;
+    border: 1px lightgray solid;
+    color: var(--primary-button);
 }

@@ -1,0 +1,41 @@
+.modal-wrapper {
+    box-shadow: 10px 10px 15px 5px lightgrey;
+    width: 30rem;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.modal-header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.alert-header {
+    color: white;
+    background-color: var(--alert);
+}
+
+.message-header, .form-header {
+    color: white;
+    background-color: var(--primary-button);
+}
+
+.modal-header-icon {
+    padding-top: 0.2rem;
+    margin-right: 1rem;
+}
+
+.modal-content {
+    padding: 2rem;
+}
+
+.modal-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin: 2rem 1rem 1rem 0;}
+

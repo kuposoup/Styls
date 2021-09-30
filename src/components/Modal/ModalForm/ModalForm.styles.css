@@ -1,0 +1,12 @@
+.modal-form-wrapper {
+    height: fit-content;
+}
+
+.modal-form-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

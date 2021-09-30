@@ -3,6 +3,8 @@ import React from 'react';
 import { PageHeader } from '../components/PageHeader/PageHeader.component';
 import { Inventory } from '../screens/Inventory/Inventory.screen';
 import './App.css';
+import { Modal } from '../components/Modal/Modal.component';
+import { dummyFormData, dummyModalMessageData } from '../utils/dummyData.temporary';
 
 function App() {
     return (
@@ -11,6 +13,12 @@ function App() {
                 <PageHeader />
                 <Switch>
                     <Route path="/" exact>
+                        <div className="modal">
+                            <Modal 
+                                modalType="form" 
+                                modalContent={dummyFormData} 
+                            />
+                        </div>
                     </Route>
                     <Route path="/appointments" exact>
                     </Route>

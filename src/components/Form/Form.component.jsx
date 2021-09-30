@@ -1,13 +1,12 @@
 import React from 'react';
+import './Form.styles.css'
 import { TEXT_AREA } from '../../constants/constants';
 import { TextArea } from '../TextArea/TextArea.component';
 import { TextBox } from '../TextBox/TextBox.component';
 import { Button } from '../Button/Button.component';
 
-export const Form = ({ inputId, formContent, hasCancel, handleCancel }) => {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-    }
+export const Form = ({ formContent, buttonContent, handleSubmit}) => {
+    
 
     const renderFormContent = () => (
         <div className="form-content-wrapper">
@@ -29,16 +28,38 @@ export const Form = ({ inputId, formContent, hasCancel, handleCancel }) => {
                     )
                 } return (
                     <div key={content.key} className="form-txt-box-wrapper">
-                        <TextBox 
-                            inputId={`${content.key}`}
-                            inputClassname="form-txt-box"
-                            placeHolder={content?.placeHolder}
-                            value={content?.value}
-                            handleOnChange={content?.handleChange}
-                        />
+                        <label>
+                            <div className="label-txt">
+                                {content?.label}:
+                            </div>
+                            <TextBox 
+                                inputId={`${content.key}`}
+                                inputClassname="form-txt-box"
+                                placeHolder={content?.placeHolder}
+                                value={content?.value}
+                                handleOnChange={content?.handleChange}
+                            />
+                        </label>
                     </div>
                 )
             })}
+        </div>
+    );
+
+    const renderFormButtons = () => (
+        <div className="form-btn-wrapper">
+            {buttonContent.map((button) => (
+                <div className="modal-btn">
+                    <Button 
+                        inputId={`${button.key}-cancel-btn`} 
+                        inputClassname={`form-cancel-btn btn ${button.class}`}
+                        buttonType={button.type} 
+                        buttonText={button.text} 
+                        handleOnClick={button.handleClick}
+                        buttonIcon={button?.icon}
+                    />
+                </div>
+            ))}
         </div>
     );
 
@@ -46,23 +67,7 @@ export const Form = ({ inputId, formContent, hasCancel, handleCancel }) => {
         <div className="form-wrapper">
             <form onSubmit={handleSubmit}>
                 {renderFormContent()}
-                <div className="form-btn-wrapper">
-                    {hasCancel && (
-                        <Button 
-                            inputId={`${inputId}-cancel-btn`} 
-                            inputClassname="form-cancel-btn btn" 
-                            buttonType="button" 
-                            buttonText="Cancel" 
-                            handleOnClick={handleCancel}
-                        />
-                    )}
-                    <Button 
-                        inputId={`${inputId}-submit-btn`} 
-                        inputClassname="form-submit-btn btn" 
-                        buttonType="submit" 
-                        buttonText="Submit" 
-                    />
-                </div>
+                {renderFormButtons()}
             </form>
         </div>
     )

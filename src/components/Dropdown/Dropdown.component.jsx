@@ -43,7 +43,7 @@ export const Dropdown = ({ inputId, inputClassname, mainText, content, icon }) =
             <Button 
                 buttonText={mainText} 
                 handleOnClick={handleOpenDropdown} 
-                inputClassname={`${inputClassname} ${isOpen ? 'active' : ''}`} 
+                inputClassname={`dropdown-btn ${inputClassname  || ''} ${isOpen ? 'active' : ''}`} 
                 inputId={inputId} icon={icon}
             />
             {isOpen && renderDropdownContent()}

@@ -5,7 +5,7 @@ export const TextArea = ({ inputId, inputClassname, value, handleOnChange }) => 
     <div>
         <textarea 
             id={inputId} 
-            className={`txtara ${inputClassname}`} 
+            className={`txt-area ${inputClassname || ''}`} 
             value={value} 
             onChange={handleOnChange}
         />
