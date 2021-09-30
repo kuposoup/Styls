@@ -2,6 +2,20 @@ import React from 'react';
 import { ALERT } from '../../../constants/constants';
 import { Button } from '../../Button/Button.component';
 
+/**
+ * 
+ * Modal Message Prop structure
+ * 
+ * modalIcon=''             -  Takes an Icon from react-icons
+ * modalType=''             -  Currently takes a string of 'message', 'alert' or 'form'
+ * modalContent={
+ *      {
+ *          header: '',     -  Takes a string for the header text
+ *          text: '',       -  Takes a string for the body text
+ *      }
+ * }
+ */
+
 export const ModalMessage = ({ modalContent, modalIcon, modalType }) => {
     const headerType = () => modalType ? `${modalType}-header` : '';
     const btnType = () => modalType ? `${modalType}-btn` : ''

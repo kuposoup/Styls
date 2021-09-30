@@ -3,7 +3,7 @@ import './Modal.styles.css';
 import { ALERT, FORM, MESSAGE} from '../../constants/constants';
 import { ModalForm } from './ModalForm/ModalForm.component';
 import { ModalMessage } from './ModalMessage/ModalMessage.component';
-import { FiAlertTriangle, FiBell, FiList } from 'react-icons/fi';
+import { FiAlertTriangle, FiBell } from 'react-icons/fi';
 
 export const Modal = ({ modalContent, modalType }) => {
     const renderModal = () => {
@@ -12,7 +12,6 @@ export const Modal = ({ modalContent, modalType }) => {
                 return (
                     <ModalForm 
                         modalType={modalType}
-                        modalIcon={<FiList />}
                         modalContent={modalContent}
                     />
                 );

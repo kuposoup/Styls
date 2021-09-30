@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGoogle } from "react-icons/fa"
+import { FcGoogle } from "react-icons/fc"
 
 export const dummyFormData = {
     modalHeader: "Sign Up",
@@ -39,7 +39,7 @@ export const dummyFormData = {
             class: 'google-btn',
             type: 'button',
             text: 'Sign Up With Google',
-            icon: <FaGoogle />,
+            icon: <FcGoogle />,
             handleClick: () => console.log('test')
         },
         {
@@ -58,12 +58,6 @@ export const dummyFormData = {
         }
     ]
 }
-
-// inputId={`${button.key}-cancel-btn`} 
-// inputClassname={`form-cancel-btn btn ${button.class}`}
-// buttonType={button.type} 
-// buttonText={button.text} 
-// handleOnClick={button.handleClick}
 
 export const dummyModalMessageData = {
     header: 'Test Header',

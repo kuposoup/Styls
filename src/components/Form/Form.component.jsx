@@ -6,8 +6,6 @@ import { TextBox } from '../TextBox/TextBox.component';
 import { Button } from '../Button/Button.component';
 
 export const Form = ({ formContent, buttonContent, handleSubmit}) => {
-    
-
     const renderFormContent = () => (
         <div className="form-content-wrapper">
             {formContent.map((content) => {
@@ -28,18 +26,16 @@ export const Form = ({ formContent, buttonContent, handleSubmit}) => {
                     )
                 } return (
                     <div key={content.key} className="form-txt-box-wrapper">
-                        <label>
-                            <div className="label-txt">
-                                {content?.label}:
-                            </div>
-                            <TextBox 
-                                inputId={`${content.key}`}
-                                inputClassname="form-txt-box"
-                                placeHolder={content?.placeHolder}
-                                value={content?.value}
-                                handleOnChange={content?.handleChange}
-                            />
-                        </label>
+                        <div className="label-txt">
+                            {content?.label}:
+                        </div>
+                        <TextBox 
+                            inputId={`${content.key}`}
+                            inputClassname="form-txt-box"
+                            placeHolder={content?.placeHolder}
+                            value={content?.value}
+                            handleOnChange={content?.handleChange}
+                        />
                     </div>
                 )
             })}
@@ -49,7 +45,7 @@ export const Form = ({ formContent, buttonContent, handleSubmit}) => {
     const renderFormButtons = () => (
         <div className="form-btn-wrapper">
             {buttonContent.map((button) => (
-                <div className="modal-btn">
+                <div key={button.key} className="modal-btn">
                     <Button 
                         inputId={`${button.key}-cancel-btn`} 
                         inputClassname={`form-cancel-btn btn ${button.class}`}
