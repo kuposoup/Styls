@@ -12,16 +12,16 @@ export const Form = ({ formContent, buttonContent, handleSubmit}) => {
                 if (content.type === TEXT_AREA) {
                     return (
                         <div key={content.key} className="form-txt-area-wrapper">
-                            <label>
+                            <div className="label-txt">
                                 {content?.label}
-                                <TextArea 
-                                    inputId={`${content.key}`}
-                                    inputClassname="form-txt-area"
-                                    placeHolder={content?.placeHolder}
-                                    value={content?.value}
-                                    handleOnChange={content?.handleChange}
-                                />
-                            </label>
+                            </div>
+                            <TextArea 
+                                inputId={`${content.key}`}
+                                inputClassname="form-txt-area"
+                                placeHolder={content?.placeHolder}
+                                value={content?.value}
+                                handleOnChange={content?.handleChange}
+                            />
                         </div>
                     )
                 } return (
@@ -33,8 +33,10 @@ export const Form = ({ formContent, buttonContent, handleSubmit}) => {
                             inputId={`${content.key}`}
                             inputClassname="form-txt-box"
                             placeHolder={content?.placeHolder}
+                            inputType={content.type}
                             value={content?.value}
                             handleOnChange={content?.handleChange}
+                            isRequired
                         />
                     </div>
                 )

@@ -3,8 +3,7 @@ import React from 'react';
 import { PageHeader } from '../components/PageHeader/PageHeader.component';
 import { Inventory } from '../screens/Inventory/Inventory.screen';
 import './App.css';
-import { Modal } from '../components/Modal/Modal.component';
-import { dummyFormData, dummyModalMessageData } from '../utils/dummyData.temporary';
+import { SignInSignUp } from '../screens/SignInSignUp/SignInSignUp.component';
 
 function App() {
     return (
@@ -13,12 +12,6 @@ function App() {
                 <PageHeader />
                 <Switch>
                     <Route path="/" exact>
-                        <div className="modal">
-                            <Modal 
-                                modalType="form" 
-                                modalContent={dummyFormData} 
-                            />
-                        </div>
                     </Route>
                     <Route path="/appointments" exact>
                     </Route>
@@ -36,6 +29,9 @@ function App() {
                     <Route path="/account" exact>
                     </Route>
                     <Route path="/account/:id" exact>
+                    </Route>
+                    <Route path="/signup" exact>
+                        <SignInSignUp />
                     </Route>
                 </Switch>
             </Router>
