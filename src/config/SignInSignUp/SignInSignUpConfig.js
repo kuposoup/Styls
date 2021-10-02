@@ -2,6 +2,9 @@ import React from 'react';
 import { FcGoogle } from "react-icons/fc"
 
 export const signUpConfig = {
+    key: 'signup',
+    redirectLink: '/signIn',
+    redirectLinkText: 'Already have an account? Sign In!',
     modalHeader: "Sign Up",
     formContent: [
         {
@@ -30,6 +33,13 @@ export const signUpConfig = {
             type: 'text',
             placeHolder: 'Enter Email',
             label: 'Email',
+            handleChange: (e) => console.log(e.target.value)
+        },
+        {
+            key: 'username',
+            type: 'text',
+            placeHolder: 'Enter Username',
+            label: 'Username',
             handleChange: (e) => console.log(e.target.value)
         },
         {
@@ -67,7 +77,49 @@ export const signUpConfig = {
             key: 'submit-btn',
             class: 'form-btn',
             type: 'submit',
-            text: 'Submit',
+            text: 'Sign Up',
+            handleClick: () => console.log('test')
+        }
+    ]
+}
+
+export const signInConfig = {
+    key: 'signin',
+    modalHeader: 'Sign In',
+    redirectLink: '/signup',
+    redirectLinkText: 'Dont have an account? Sign up now!',
+    forgotPasswordLink: '/forgotpassword',
+    forgotPasswordText: 'Forgot your password?',
+    formContent: [
+        {
+            key: 'username',
+            type: 'text',
+            placeHolder: 'Enter Username',
+            label: 'Username',
+            handleChange: (e) => console.log(e.target.value)
+        },
+        {
+            key: 'password',
+            type: 'password',
+            placeHolder: 'Enter Password',
+            label: 'Password',
+            handleChange: (e) => console.log(e.target.value)
+        },
+    ],
+    buttonContent: [
+        {
+            key: 'google-btn',
+            class: 'google-btn',
+            type: 'button',
+            text: 'Sign In With Google',
+            icon: <FcGoogle />,
+            handleClick: () => console.log('test')
+        },
+        {
+            key: 'submit-btn',
+            class: 'form-btn',
+            type: 'submit',
+            text: 'Sign In',
             handleClick: () => console.log('test')
         }
     ]

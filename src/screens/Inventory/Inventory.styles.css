@@ -5,42 +5,16 @@
     justify-content: flex-start;
 }
 
-.inventory-header-text {
-    margin-bottom: 3rem;
-
-    font-size: 40px;
-    font-weight: 200;
-    font-family: 'Open Sans Condensed', sans-serif;
-    letter-spacing: 5px;
-    color: white;
-
-    background-color: gray;
-
-    border-bottom: 4px white double;
-    border-top: 1px white solid;
-
-    transition: 0.5s ease-out;
-}
-
 .hidden {
     display: none;
     height: 0;
 }
 
 .inventory-btn-wrapper {
-    margin: 3rem 2rem 0 0;
+    margin: 3rem 5rem 0 0;
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-}
-
-.inventory-dropdown {
-    background-color: grey;
-    transition: 0.3s;
-}
-
-.inventory-dropdown:hover {
-    transition: 0.3s;
 }
 

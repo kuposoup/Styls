@@ -2,8 +2,9 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import React from 'react';
 import { PageHeader } from '../components/PageHeader/PageHeader.component';
 import { Inventory } from '../screens/Inventory/Inventory.screen';
-import './App.css';
+import './App.scss';
 import { SignInSignUp } from '../screens/SignInSignUp/SignInSignUp.component';
+import { signInConfig, signUpConfig } from '../config/SignInSignUp/SignInSignUpConfig';
 
 function App() {
     return (
@@ -31,7 +32,14 @@ function App() {
                     <Route path="/account/:id" exact>
                     </Route>
                     <Route path="/signup" exact>
-                        <SignInSignUp />
+                        <SignInSignUp 
+                            formConfig={signUpConfig}
+                        />
+                    </Route>
+                    <Route path="/signin" exact>
+                        <SignInSignUp 
+                            formConfig={signInConfig}
+                        />
                     </Route>
                 </Switch>
             </Router>

@@ -5,7 +5,7 @@
 
 .action-content {
     margin: 0 10px;
-    color: grey;
+    color: var(--primary-button);
 }
 
 .action-content:hover {

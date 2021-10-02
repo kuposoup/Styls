@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import { FiChevronDown } from "react-icons/fi";
+import { HiOutlineClipboardList } from "react-icons/hi";
 import { Dropdown } from '../../components/Dropdown/Dropdown.component';
 import { 
     getInventoryGridConfig,
@@ -34,8 +35,13 @@ export const Inventory = () => {
     /* --------------  Render functions -------------- */
     const renderHeader = () => (
         <div className="inventory-header-wrapper">
-            <div className="inventory-header-text slideDown">
-                {INVENTORY}
+            <div className="main-header-wrapper slideDown">
+                <div className="main-header-icon">
+                    <HiOutlineClipboardList />
+                </div>
+                <div className="main-header-text">
+                    {INVENTORY}
+                </div>
             </div>
             <div className="inventory-btn-wrapper">
                 <Dropdown
@@ -52,12 +58,22 @@ export const Inventory = () => {
     const renderTable = () => {
         const gridOptions = getInventoryGridConfig(editItems, deleteItems, gridApi)
         return (
-            <div className="inventory-table-wrapper">
-                {gridOptions && <AgGridReact
-                    className="ag-theme-alpine"
-                    gridOptions={gridOptions}
-                    onGridReady={onGridReady}
-                />}
+            <div className="table-wrapper">
+                {gridOptions && (
+                    <div 
+                        className="ag-theme-custom-react table"
+                        style={{
+                          height: '100%',
+                          width: '100%'
+                        }}
+                    >
+                        <AgGridReact
+                            gridOptions={gridOptions}
+                            onGridReady={onGridReady}
+                        />
+                    </div>
+                    
+                )}
             </div>
         )
     }
